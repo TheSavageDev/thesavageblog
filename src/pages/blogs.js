@@ -44,7 +44,7 @@ export default class Blogs extends Component {
                         <h3 className="title">{item.node.title}</h3>
                         <span className="date">
                           <i className="fas fa-calendar-alt"></i>{" "}
-                          {moment(item.node.createdAt).format("LL")}
+                          {moment(item.node.date).format("LL")}
                         </span>
                       </div>
                     </div>
@@ -65,6 +65,7 @@ export const pageQuery = graphql`
       edges {
         node {
           title
+          date
           slug
           featureImage {
             fluid(maxWidth: 1500) {
@@ -77,7 +78,6 @@ export const pageQuery = graphql`
               sizes
             }
           }
-          createdAt
         }
       }
     }

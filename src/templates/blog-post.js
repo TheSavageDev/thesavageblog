@@ -15,9 +15,8 @@ export default class blogPost extends Component {
         <SEO
           title={data.title}
           keywords={[
-            `Rohit Gupta`,
-            `Frontend Developer`,
-            `Developer`,
+            `Jason A Savage`,
+            `Software Engineer`,
             `${data.title}`
           ]}
         />
@@ -38,7 +37,7 @@ export default class blogPost extends Component {
               <h1 className="title">{data.title}</h1>
               <span className="date">
                 <i className="fas fa-calendar-alt"></i>{" "}
-                {moment(data.createdAt).format("LL")}
+                {moment(data.date).format("LL")}
               </span>
               <div
                 dangerouslySetInnerHTML={{
@@ -58,6 +57,7 @@ export const pageQuery = graphql`
     contentfulBlogs(slug: { eq: $slug }) {
       id
       title
+      date
       slug
       featureImage {
         fluid(maxWidth: 1500) {
@@ -75,7 +75,6 @@ export const pageQuery = graphql`
           html
         }
       }
-      createdAt
     }
     contentfulSiteInformation {
       siteUrl

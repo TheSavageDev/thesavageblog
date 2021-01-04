@@ -124,10 +124,11 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulBlogs(limit: 5, sort: {fields: createdAt, order: DESC}) {
+    allContentfulBlogs(limit: 5, sort: {fields: date, order: DESC}) {
       edges {
         node {
           title
+          date
           slug
           featureImage {
             fluid(maxWidth: 600) {
@@ -140,7 +141,6 @@ export const pageQuery = graphql`
               sizes
             }
           }
-          createdAt
         }
       }
     }
