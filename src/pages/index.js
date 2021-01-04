@@ -11,7 +11,6 @@ import Work from "../components/work";
 import Blogs from "../components/blogs";
 import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
-import Photos from "../components/photos";
 
 const IndexPage = ({ data }) => (
   <Layout header="home">
@@ -51,12 +50,6 @@ const IndexPage = ({ data }) => (
         return (
           <Testimonial key="Testimonial" data={data.allContentfulTestimonials}></Testimonial>
         );
-      })}
-
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === "Photos")
-      .map(t => {
-        return <Photos key="Photos" data={data.contentfulPhotos}></Photos>;
       })}
 
     {data.contentfulSiteInformation.menus

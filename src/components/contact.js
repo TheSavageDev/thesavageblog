@@ -9,10 +9,11 @@ export default class Contact extends Component {
             <h2 className="text-center">Contact</h2>
           </div>
           <form
-            action={`https://formspree.io/f/xvovdppq`}
+            // action={`https://formspree.io/f/xvovdppq`}
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-recaptcha="true"
           >
             <div>
               <label>

@@ -41,7 +41,6 @@ module.exports = {
         theme_color: `#333`,
         icon: `src/images/fev_icon.png` // This path is relative to the root of the site.
       }
-    },
-    `gatsby-plugin-offline`
+    }
   ]
 };

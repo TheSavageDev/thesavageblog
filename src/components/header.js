@@ -90,15 +90,6 @@ export default class Header extends Component {
                       );
                     })}
                   {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
-                      return (
-                        <li key="Photos">
-                          <Link to={`/#Photos`}>Photos</Link>
-                        </li>
-                      );
-                    })}
-                  {data.menus
                     .filter(item => item === "Contact")
                     .map(t => {
                       return (
