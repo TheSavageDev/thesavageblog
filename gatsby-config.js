@@ -59,13 +59,14 @@ module.exports = {
           {
             serialize: ({ query: { site, allContentfulBlogs } }) => {
               return allContentfulBlogs.edges.map(({ node }) => {
+                const { title, slug, description, date } = node;
+                const { siteUrl } = site.siteMetadata;
                 return {
-                  title: node.title,
-                  url: `${site.siteMetadata.siteUrl}/${node.slug}`,
+                  title,
+                  url: `${siteUrl}/${slug}`,
                   custom_elements: [
-                    { 'content:encoded': node.description.childMarkdownRemark.rawMarkdownBody },
-                    { cover_image: node.featureImage.fluid.src },
-                    { date: node.date },
+                    { content: description.childMarkdownRemark.rawMarkdownBody },
+                    { date },
                   ],
                 }
               })
