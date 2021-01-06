@@ -65,7 +65,7 @@ module.exports = {
                   title,
                   url: `${siteUrl}/${slug}`,
                   custom_elements: [
-                    { content: description.childMarkdownRemark.html },
+                    { 'content:encoded': description.childMarkdownRemark.html },
                   ],
                 }
               })
