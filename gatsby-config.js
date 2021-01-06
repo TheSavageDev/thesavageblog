@@ -87,7 +87,7 @@ module.exports = {
                 }
               }
             `,
-            output: `/rss.xml`,
+            output: `feed/index.xml`,
             title: `The Savage Dev`,
           },
         ]
