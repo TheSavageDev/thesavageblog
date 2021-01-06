@@ -65,8 +65,7 @@ module.exports = {
                   title,
                   url: `${siteUrl}/${slug}`,
                   custom_elements: [
-                    { content: description.childMarkdownRemark.rawMarkdownBody },
-                    { date },
+                    { content: description.description },
                   ],
                 }
               })
@@ -77,17 +76,9 @@ module.exports = {
                   edges {
                     node {
                       title
-                      date
                       slug
-                      featureImage {
-                        fluid(maxWidth: 1500) {
-                          src
-                        }
-                      }
                       description {
-                        childMarkdownRemark {
-                          rawMarkdownBody
-                        }
+                        description 
                       }
                     }
                   }
