@@ -22,7 +22,7 @@ img {
   color: #fff;
 }
 a {
-  color: #ef5826;
+  color: #11ad16;
 }
 h2 {
   font-size: 28px;
@@ -147,7 +147,7 @@ body {
 }
 .banner .banner-details .social li a:after {
   content: "";
-  background: #ef5826;
+  background: #11ad16;
   position: absolute;
   top: -100%;
   left: 0;
@@ -200,7 +200,7 @@ body {
   position: absolute;
   bottom: -3px;
   left: 0;
-  background: #fff;
+  background: #11ad16;
   transition: 0.5s all;
 }
 .site-header .header-main .menu ul li a:hover:after {
@@ -309,6 +309,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 50%;
+  transform: translate(-50%, 0);
   -webkit-transform: translate(-50%, 0);
   -moz-transform: translate(-50%, 0);
   -ms-transform: translate(-50%, 0);
@@ -359,8 +360,6 @@ body {
   object-fit: cover;
   border-radius: 100%;
 }
-.testi-inner p {
-}
 .testi-inner .name {
   margin: 0;
 }
@@ -409,6 +408,7 @@ form button {
   transition: all 0.3s linear;
   min-width: 186px;
   overflow: hidden;
+  border-radius: 4px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   font-size: 15px;
@@ -525,7 +525,7 @@ h2:after,
   height: 1px;
   display: inline-block;
   position: absolute;
-  background: #ef5826;
+  background: #11ad16;
   top: 100%;
   left: 0;
 }
