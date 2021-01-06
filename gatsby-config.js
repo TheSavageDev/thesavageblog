@@ -65,7 +65,7 @@ module.exports = {
                   title,
                   url: `${siteUrl}/${slug}`,
                   custom_elements: [
-                    { content: description.description },
+                    { content: description.childMarkdownRemark.html },
                   ],
                 }
               })
@@ -78,7 +78,9 @@ module.exports = {
                       title
                       slug
                       description {
-                        description 
+                        childMarkdownRemark {
+                          html
+                        }
                       }
                     }
                   }
